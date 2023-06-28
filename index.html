@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy Birthday🎊🎈!</title>
+	<style>
+		body {
+			background-color: #F5E3EE;
+			font-family: Arial, sans-serif;
+			text-align: center;
+			padding: 50px;
+		}
+
+		h1 {
+			font-size: 48px;
+			color: #FF4081;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 24px;
+			color: #333333;
+			line-height: 1.5;
+			margin-bottom: 30px;
+		}
+
+		.picture-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 20px 0;
+		}
+
+		.picture-container img {
+			max-width: 300px;
+			height: auto;
+			margin: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			transition: transform 0.2s ease-in-out;
+		}
+
+		.picture-container img:hover {
+			transform: scale(1.1);
+		}
+
+		button {
+			background-color: #FF4081;
+			color: #FFFFFF;
+			border: none;
+			padding: 14px 28px;
+			font-size: 32px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #D81B60;
+		}
+
+		.love {
+			background-color: #FF66CC;
+			color: white;
+		}
+
+		.confetti {
+			position: fixed;
+			width: 10px;
+			height: 10px;
+			background-color: #FFC0CB;
+			border-radius: 50%;
+			pointer-events: none;
+			animation: confetti-fall 5s ease-in-out infinite;
+		}
+
+		@keyframes confetti-fall {
+			0% {
+				transform: translate(0, -50px) rotate(0deg);
+				opacity: 1;
+			}
+			100% {
+				transform: translate(500px, 800px) rotate(1440deg);
+				opacity: 0;
+			}
+		}
+	</style>
+	<script>
+		function playMusic() {
+			var audio = new Audio('birthday_song.mp3');
+			audio.play();
+		}
+
+		document.addEventListener('DOMContentLoaded', function() {
+			function createConfetti() {
+				var confetti = document.createElement('div');
+				confetti.className = 'confetti';
+				confetti.style.left = Math.random() * window.innerWidth + 'px';
+				document.body.appendChild(confetti);
+				setTimeout(function() {
+					confetti.remove();
+				}, 5000);
+			}
+
+			createConfetti();
+		});
+	</script>
+</head>
+<body>
+	<h1>Happy Birthday, Praise!🎊🌹❣️</h1>
+	<p>Wishing you all the best on your special day.</p>
+	<div class="picture-container">
+		<img src="Birthday picture.jpeg" alt="Birthday Picture">
+		<img src="praise.jpeg" alt="Picture 1">
+		<img src="Pic.jpeg" alt="Picture 2">
+		<img src="Praise.jpeg" alt="Picture 3">
+		<img src="Birthday cake.jpeg" alt="birthday cake">	</div>
+	<button onclick="playMusic()">Play music</button>
+	<p>May your special day be filled with joy, laughter, and unforgettable moments. Wishing you a year full of adventure, growth, and success. Remember that you are loved and cherished, and that your presence in this world makes it a brighter place. Enjoy your birthday to the fullest, and know that I'm always here to support and cheer you on. Happy birthday, Praise! <div class="love"><em>I love you❣️🌹</em></div></p>
+</body>
+</html>
+
+	
